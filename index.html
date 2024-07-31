@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="author" content="Glory Tv"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="description" content="Glory TV channel website"/>
+    <title>Glory TV</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Stylesheets -->
+    <link href="assets/css/vendor.min.css" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    
+    <!-- Video.js CSS -->
+    <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet"/>
+    
+    <!-- Video.js JS -->
+    <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+    <!-- HLS.js for Video.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
+    
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+            top:-120px;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #space-hidden{
+          display: inline-block;
+          height: 30px;
+        }
+        .private{
+            position: relative;
+        }
+        
+    </style>
+</head>
+<body>
+  <!--div class="container"-->
+  <!--div class="row"-->
+    <!--div class="col-12 col-lg-6 offset-lg-3"-->
+        <div class="heading text-center">
+          <span id="space-hidden"></span>
+            <p class="heading-subtitle">Welcome to</p>
+            <h1 class="heading-title">Glory TV</h1>
+            <span id="space-hidden"></span>
+        <hr>
+            <a href="privacy-term.html" class="private">Privacy Policy</a>
+        </div>
+        
+        <!--button class="button"--><!--/button-->
+    
+    <!--/div-->
+    <!--/div-->
+  <!--/div-->
+    <!-- Document Wrapper-->
+    <div class="wrapper clearfix">
+        <!-- Video Section -->
+        <section class="video" id="video">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="video-container">
+                            <!-- Video element with Video.js -->
+                            <video id="my-video" class="video-js vjs-default-skin" controls autoplay muted>
+                                <source src="http://www.atechgroupuk.site:7777/GTV.m3u8" type="application/x-mpegURL">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--About session-->
+        <div class="about">
+          <center><h4 class="name">About</h4></center>
+          
+          <p class="desc">Glory TV is a dedicated church viewing television channel that aims to bring spiritual content directly to viewers' homes. It broadcasts a variety of programs, including live church services, sermons, worship music, Bible studies, and inspirational messages. Designed to nurture faith and provide spiritual guidance, Glory TV serves as a resource for those seeking to deepen their understanding of Christian teachings and connect with a broader faith community. Whether for regular churchgoers or individuals exploring their faith, Glory TV offers accessible religious programming to inspire and uplift.</p>
+        </div>
+        <footer class="footer" id="footer">
+          
+            <div class="footer-bottom">
+                <div class="container">
+                    <hr/>
+                </div>
+                <!--Footer-->
+        <footer class="footer" id="footer">
+            <div class="footer-bottom">
+                
+                <div class="container">
+          
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <div class="footer-copyright"><span>2024 &copy; Glory TV. All rights reserved.</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Initialize Video.js -->
+    <script>
+        var player = videojs('my-video');
+    </script>
+</body>
+</html>
