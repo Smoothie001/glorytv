@@ -6,7 +6,7 @@
     <meta name="author" content="Glory Tv"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="description" content="Glory TV channel website"/>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+    <!--meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/-->
     <title>Glory TV</title>
     
     <!-- Fonts -->
@@ -25,6 +25,7 @@
     <!-- HLS.js for Video.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
     
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <style>
         .video-container {
             position: relative;
@@ -74,21 +75,24 @@
     <!-- Document Wrapper-->
     <div class="wrapper clearfix">
         <!-- Video Section -->
+       
         <section class="video" id="video">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="video-container">
-                            <!-- Video element with Video.js -->
-                            <video id="my-video" class="video-js vjs-default-skin" controls autoplay muted>
-                                <source src="https://www.atechgroupuk.site:7777/GTV.m3u8" type="application/x-mpegURL">
-                                Your browser does not support the video tag.
+                            <!--Video element with Video.js-->
+                            <iframe src="https://atechgroupuk.com/GTV/GTV.html" width="1200" height="1000" frameborder="0" allowfullscreen></iframe>
+                            <video id="my-video" class="video-js vjs-default-skin" width="1200" height="1000" controls autoplay muted>
+                            
                             </video>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!--About session-->
         <div class="about">
           <center><h4 class="name">About</h4></center>
